@@ -33,8 +33,7 @@ enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
       <FavouriteContextProvider>
-        <BrowserRouter
-          basename={siteBaseName}>
+        <BrowserRouter basename={siteBaseName}>
           <App />
         </BrowserRouter>
       </FavouriteContextProvider>
