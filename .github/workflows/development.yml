@@ -103,4 +103,4 @@ jobs:
         with:
           context: ./
           push: true
-          tags: astb01/staybae-ci-cd:${{steps.build_version.outputs.current_tag}}-wip
+          tags: whitneydr/staybae:${{steps.build_version.outputs.current_tag}}-wip

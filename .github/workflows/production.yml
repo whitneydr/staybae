@@ -84,7 +84,7 @@ jobs:
         with:
           context: ./
           push: true
-          tags: astb01/staybae-ci-cd:${{steps.build_version.outputs.new_tag}}
+          tags: whitneydr/staybae:${{steps.build_version.outputs.new_tag}}
  
   # Deploy Job
   deploy:
