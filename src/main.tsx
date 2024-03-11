@@ -7,6 +7,8 @@ import '../styles/global.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { FavouriteContextProvider } from './context/FavouritesContext';
 
+const siteBaseName = process.env.NODE_ENV !== 'development' ? '/staybae/' : '/';
+
 async function enableMocking() {
   // if (process.env.NODE_ENV !== 'development') {
   //   return;
@@ -34,9 +36,7 @@ enableMocking().then(() => {
     <React.StrictMode>
       <FavouriteContextProvider>
         <BrowserRouter
-          basename={
-            process.env.NODE_ENV !== 'development' ? '/staybae-ui/' : '/'
-          }>
+          basename={siteBaseName}>
           <App />
         </BrowserRouter>
       </FavouriteContextProvider>
