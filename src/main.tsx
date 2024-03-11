@@ -8,9 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { FavouriteContextProvider } from './context/FavouritesContext';
 
 const siteBaseName = process.env.NODE_ENV !== 'development' ? '/staybae/' : '/';
-const mockWorkerUrl = process.env.NODE_ENV !== 'development'
-? '/staybae/mockServiceWorker.js'
-: '/mockServiceWorker.js';
+const mockWorkerUrl = process.env.NODE_ENV !== 'development' ? '/staybae/mockServiceWorker.js' : '/mockServiceWorker.js';
 
 async function enableMocking() {
   // if (process.env.NODE_ENV !== 'development') {
