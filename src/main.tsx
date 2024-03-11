@@ -8,6 +8,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { FavouriteContextProvider } from './context/FavouritesContext';
 
 const siteBaseName = process.env.NODE_ENV !== 'development' ? '/staybae/' : '/';
+const mockWorkerUrl = process.env.NODE_ENV !== 'development'
+? '/staybae/mockServiceWorker.js'
+: '/mockServiceWorker.js';
 
 async function enableMocking() {
   // if (process.env.NODE_ENV !== 'development') {
@@ -22,10 +25,7 @@ async function enableMocking() {
   // once the Service Worker is up and ready to intercept requests.
   return worker.start({
     serviceWorker: {
-      url:
-        process.env.NODE_ENV !== 'development'
-          ? '/staybae-ui/mockServiceWorker.js'
-          : '/mockServiceWorker.js',
+      url: mockWorkerUrl,
     },
     onUnhandledRequest: 'bypass',
   });
